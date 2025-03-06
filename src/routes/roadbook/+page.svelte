@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	const title: string = 'Roadbook';
 
 	interface Checkpoint {
@@ -19,9 +18,8 @@
 		{ name: 'Bullion', distance_from_start: 82 },
 		{ name: 'Limours', distance_from_start: 90 },
 		{ name: 'Janvry', distance_from_start: 96 },
-		{ name: 'Marcoussis', distance_from_start: 102 },
+		{ name: 'Marcoussis', distance_from_start: 102 }
 	];
-
 
 	let current_km: number = $state(0);
 
@@ -56,7 +54,6 @@
 	}
 </script>
 
-
 {#snippet roadbookCurrentPosition()}
 	<div class="flex text-center">
 		<p class="grow bg-yellow-300 text-2xl">{current_checkpoint.name}: {current_km} km</p>
@@ -70,14 +67,15 @@
 		class:bg-yellow-300={is_current}
 		onclick={() => set_current_km(distance_km + current_km)}
 	>
-		<p class="w-4/5 text-4xl text-nowrap overflow-ellipsis overflow-hidden mr-4 ">{city}</p>
+		<p class="mr-4 w-4/5 overflow-hidden text-4xl text-nowrap overflow-ellipsis">{city}</p>
 		<div class="flex justify-start">
 			<!--			<p class=" text-2xl">{getFullCircles(distance_km, 5)}</p>-->
 			<!--			<p class="text-2xl">{getEmptyCircles(distance_km, 5)}</p>-->
 		</div>
 		<p
 			class:opacity-20={is_current}
-			class="grow rounded-lg border-2 border-solid border-red-300 bg-red-200 text-4xl font-bold">
+			class="grow rounded-lg border-2 border-solid border-red-300 bg-red-200 text-4xl font-bold"
+		>
 			{distance_km}
 		</p>
 	</button>
@@ -95,18 +93,18 @@
 </div>
 
 <style>
-    .container-roadbook {
-        display: flex;
-        flex-direction: column;
-    }
+	.container-roadbook {
+		display: flex;
+		flex-direction: column;
+	}
 
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+	p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 
-    .est-passe {
-        color: #5e5e5e;
-        opacity: 0.2;
-    }
+	.est-passe {
+		color: #5e5e5e;
+		opacity: 0.2;
+	}
 </style>
