@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import CodeEditor from '$lib/components/CodeEditor.svelte';
+</script>
 
 {#snippet item(title: string, href: string)}
 	<li>
