@@ -1,4 +1,6 @@
-{#snippet item(title, href)}
+<script lang="ts"></script>
+
+{#snippet item(title: string, href: string)}
 	<li>
 		{title}
 		<a
