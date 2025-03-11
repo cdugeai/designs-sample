@@ -19,7 +19,7 @@
 	const displayImages: boolean = false;
 </script>
 
-<div class="flex items-center gap-1" class:flex-row-reverse={reversed}>
+<div class:flex-row-reverse={reversed} class=" flex items-center gap-1">
 	<img class:show={displayImages} src={img_url} alt="" class="hide h-8" />
 	<div
 		class={'team px-2 font-semibold text-nowrap text-white uppercase ' + className}
