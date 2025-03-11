@@ -1,4 +1,8 @@
-{#snippet item(title, href)}
+<script lang="ts">
+	import CodeEditor from '$lib/components/CodeEditor.svelte';
+</script>
+
+{#snippet item(title: string, href: string)}
 	<li>
 		{title}
 		<a
@@ -32,6 +36,8 @@
 
 	<ul class="list-disc pl-10">
 		{@render item('🛵 Motorbike roadbook', '/roadbook')}
+		{@render item('🥅 A simple score panel', '/score-panel')}
+		{@render item('🌴 A simple travel timeline', '/timeline')}
 	</ul>
 </div>
 

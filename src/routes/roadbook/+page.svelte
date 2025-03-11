@@ -28,7 +28,7 @@
 	);
 
 	let current_checkpoint: Checkpoint = $derived(
-		checkpoints.find((e) => e.distance_from_start == current_km)
+		checkpoints.find((e) => e.distance_from_start == current_km)!
 	);
 
 	let remaining_checkpoints: Array<Checkpoint> = $derived(
@@ -60,7 +60,7 @@
 	</div>
 {/snippet}
 
-{#snippet roadbookItem(city, distance_km, est_passe, is_current)}
+{#snippet roadbookItem(city: string, distance_km: number, est_passe: boolean, is_current: boolean)}
 	<button
 		class="my-1 flex justify-start text-center"
 		class:est-passe={est_passe}
