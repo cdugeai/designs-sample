@@ -9,7 +9,7 @@
 	let { team_home, team_away }: Props = $props();
 </script>
 
-<div class="flex">
+<div class="flex justify-center">
 	{@render team_home()}
 	<p class="mx-2 text-4xl font-extrabold">-</p>
 	{@render team_away()}

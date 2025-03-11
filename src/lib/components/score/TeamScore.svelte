@@ -21,22 +21,27 @@
 
 <div class="flex items-center gap-1" class:flex-row-reverse={reversed}>
 	<img class:show={displayImages} src={img_url} alt="" class="hide h-8" />
-	<p
-		class={'team  px-2 font-semibold text-nowrap text-white uppercase ' + className}
+	<div
+		class={'team px-2 font-semibold text-nowrap text-white uppercase ' + className}
 		style={'background-color: ' + backgroundColor}
 	>
 		{team}
-	</p>
-	<p class="score text-8xl font-bold">{score}</p>
+	</div>
+	<div class="score text-8xl font-bold">{score}</div>
 </div>
 
 <style>
 	.team {
 		font-size: 24px;
+		max-width: 10rem;
+		overflow: scroll;
 	}
 
 	.score {
 		font-size: 24px;
+		max-width: 3rem;
+		overflow-y: hidden;
+		overflow-x: scroll;
 	}
 
 	.hide {
